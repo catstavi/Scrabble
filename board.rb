@@ -42,8 +42,8 @@ module ScrabbleGame
     end
 
     def can_play?(word, x, y, direction)
-      length = word.length
-      length.each do |letter|
+      letters = word.split(//)
+      letters.each do |letter|
         if free_square?(x,y)
           direction == :across ? x+=1 : y+=1
         else
